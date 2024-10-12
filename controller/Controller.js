@@ -4,7 +4,7 @@ import Jatekter from "../view/Jatekter";
 export default class Controller{
 
     constructor(){
-        this.model= new Model;
-        this.view= new Jatekter;
+        this.model= new Model();
+        this.view= new Jatekter(model.getLista(), $('.jatekter'));
     }
 }

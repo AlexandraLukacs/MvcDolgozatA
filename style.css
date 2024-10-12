@@ -1,0 +1,49 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.jatekter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.kartya {
+    background-color: lightblue;
+    border: 1px solid black;
+    border-radius: 8px;
+    text-align: center;
+    width: 18%;
+    box-sizing: border-box;
+    cursor: pointer;
+    padding: 20px;
+}
+
+.eredmeny {
+    margin-bottom: 20px;
+    font-size: 18px;
+    text-align: center;
+}
+
+@media (max-width: 1199px) {
+    .kartya {
+        width: calc(25% - 10px); /* 4 kártya egy sorban */
+    }
+}
+
+@media (max-width: 899px) {
+    .kartya {
+        width: calc(33.33% - 10px); /* 3 kártya egy sorban */
+    }
+}
+
+@media (max-width: 599px) {
+    .kartya {
+        width: calc(50% - 10px); /* 2 kártya egy sorban */
+    }
+}

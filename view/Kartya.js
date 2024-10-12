@@ -1,28 +1,44 @@
 export default class Kartya{
 
-    #lista;
+    #index;
     #szuloElem;
+    #elem;
 
-    constructor(lista, szuloElem){
-        this.#lista=lista;
+    constructor(index, szuloElem){
+        this.#index=index;
         this.#szuloElem=szuloElem;
-        this.kartyaKiir();
-        this.elem;
+        this.elem= this.kartyaKiir();
         this.esemenyKezelo();
     }
 
     kartyaKiir(){
-        this.#szuloElem.append(`
-            <div class="card kivalaszt">
-                <div class="card-body">
-                    <img class="card-img-top" src="" alt="ordogszellem">
-                </div>
-            </div>`)
+        // Kártya elem létrehozása
+        const kartyaElem = document.createElement('div');
+        kartyaElem.classList.add('kartya');
+
+        // Kártya body létrehozása
+        const kartyaBody = document.createElement('div');
+        kartyaBody.classList.add('kartya-body');
+
+        // Kép elem létrehozása
+        const kartyaImg = document.createElement('img');
+        kartyaImg.classList.add('kartya-img');
+        kartyaImg.setAttribute('src', '');
+        kartyaImg.setAttribute('alt', 'ordogszellem');
+
+        // A kártya struktúra felépítése
+        kartyaBody.appendChild(kartyaImg);
+        kartyaElem.appendChild(kartyaBody);
+
+        // A kártya hozzáadása a szülő elemhez
+        this.#szuloElem.appendChild(kartyaElem);
+
+        return kartyaElem;
     }
 
     esemenyKezelo(){
         this.elem.on("click", ()=>{
-            const e=new CustomEvent("kivalaszt", {detail:this.#lista})
+            const e=new CustomEvent("kivalaszt", {detail:this.#index})
             window.dispatchEvent(e)
         })
     }
