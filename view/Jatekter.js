@@ -23,7 +23,7 @@ export default class Jatekter {
     }
 
     eredmenykiir(index) {
-        const eredmeny = this.#lista[index] === 'ördög' ? 'Elvitt az ördög!' : 'Megmentettek a jó lelkek!';
+        const eredmeny = this.#lista[index] === "👹" ? 'Elvitt az ördög!' : 'Megmentettek a jó lelkek!';
         this.#eredmenyElem.textContent = eredmeny;
     }
 }

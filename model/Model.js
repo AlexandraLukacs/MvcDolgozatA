@@ -20,7 +20,7 @@ export default class Model{
     }
 
     ellenorzes(index) {
-        return this.#lista[index] === 'ördög' ? 'Elvitt az ördög!' : 'Megmentettek a jó lelkek!';
+        return this.#lista[index] === "👹" ? 'Elvitt az ördög!' : 'Megmentettek a jó lelkek!';
     }
 
 }
