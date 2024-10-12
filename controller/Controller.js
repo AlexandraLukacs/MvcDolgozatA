@@ -5,6 +5,6 @@ export default class Controller{
 
     constructor(){
         this.model= new Model();
-        this.view= new Jatekter(model.getLista(), $('.jatekter'));
+        this.view= new Jatekter(this.model.getLista(), $('.jatekter'));
     }
 }
