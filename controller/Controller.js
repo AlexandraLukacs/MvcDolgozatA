@@ -1,5 +1,5 @@
-import Model from "../model/Model";
-import Jatekter from "../view/Jatekter";
+import Model from "../model/Model.js";
+import Jatekter from "../view/Jatekter.js";
 
 export default class Controller{
 
